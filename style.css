@@ -1,0 +1,79 @@
+body
+{
+	margin: 0 0;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+#container {
+  height: 100px;
+  width: 100px;
+  position: relative;
+    
+}
+
+#container:hover #vinyl {
+  left: 40px;
+}
+
+#cover 
+{
+    z-index: 2;
+    width: 100px; 
+    height: 100px; 
+    background-size: 100px 100px;
+}
+
+#vinyl
+{
+    z-index: -1;
+    position: absolute;
+    background: url(vinyl.png);
+    height: 100px;
+    width: 100px;
+    top: 0px;
+}
+
+#cover a
+{
+	color: #fff;
+	text-decoration: none;
+}
+
+#menu
+{
+	position: relative;
+	left: 5px;
+	top: 80px;
+}
+
+#cover a:hover
+{
+	color: #fff;
+	text-decoration: none;
+}
+
+#cover a:visited
+	color: #fff;
+	text-decoration: none;
+}
+
+
+#container #vinyl.paused
+{
+    animation: rotate 2s linear infinite;
+    animation-play-state: paused;
+	left: 10px;
+}
+#container #vinyl.animated {
+    animation: rotate 2s linear infinite;
+    animation-play-state: running;
+	left: 40px;
+}
